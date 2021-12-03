@@ -1,28 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace IS_3_19_Strelkov_DN
+namespace BazLiter
 {
-    static class Program
+    public class ConnDB
     {
-        /// <summary>
-        /// Главная точка входа для приложения.
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());
-        }
-    }
-    public class ConnCenter
-    {
-        public static MySqlConnection connCenter()
+        public static MySqlConnection ConnMySql()
         {
             string host = "caseum.ru";
             string port = "33333";

@@ -34,5 +34,11 @@ namespace IS_3_19_Strelkov_DN
             Form3 newForm = new Form3();
             newForm.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form4 newForm = new Form4();
+            newForm.Show();
+        }
     }
 }
