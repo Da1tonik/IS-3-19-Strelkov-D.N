@@ -23,12 +23,12 @@ namespace IS_3_19_Strelkov_DN
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ConnCenter ConnCenter = new ConnCenter();
+            Baza baza = new Baza();
             try
             {
-                ConnCenter.connCenter().Open();
+                Baza.baza().Open();
                 string commandStr = "SELECT id AS 'ID', fio AS 'ФИО', theme_kurs AS 'Тема' FROM t_stud";
-                MyDA.SelectCommand = new MySqlCommand(commandStr, ConnCenter.connCenter());
+                MyDA.SelectCommand = new MySqlCommand(commandStr, Baza.baza());
                 MyDA.Fill(table);
                 bSource.DataSource = table;
                 dataGridView1.DataSource = bSource;
@@ -40,7 +40,7 @@ namespace IS_3_19_Strelkov_DN
             finally
             {
                 MessageBox.Show("Подключение завершено.");
-                ConnCenter.connCenter().Close();
+                Baza.baza().Close();
             }
         }
 

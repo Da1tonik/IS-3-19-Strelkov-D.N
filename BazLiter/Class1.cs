@@ -7,9 +7,9 @@ using MySql.Data.MySqlClient;
 
 namespace BazLiter
 {
-    public class ConnDB
+    public class Baza
     {
-        public static MySqlConnection ConnMySql()
+        public static MySqlConnection baza()
         {
             string host = "caseum.ru";
             string port = "33333";

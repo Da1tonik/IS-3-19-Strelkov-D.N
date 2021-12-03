@@ -17,9 +17,9 @@ namespace IS_3_19_Strelkov_DN
         {
             InitializeComponent();
         }
-        class ConnCenter
+        class Baza
         {
-            public MySqlConnection ConnCent()
+            public MySqlConnection baza()
             {
                 string port = "33333";
                 string host = "caseum.ru";
@@ -33,10 +33,10 @@ namespace IS_3_19_Strelkov_DN
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            ConnCenter ConnCenter = new ConnCenter();
+            Baza baza = new Baza();
             try
             {
-                ConnCenter.ConnCent().Open();
+                baza.baza().Open();
             }
             catch (Exception yxz)
             {
@@ -45,7 +45,7 @@ namespace IS_3_19_Strelkov_DN
             finally
             {
                 MessageBox.Show("Успешное подключение");
-                ConnCenter.ConnCent().Close();
+                baza.baza().Close();
             }
         }
 
