@@ -33,9 +33,9 @@ namespace IS_3_19_Strelkov_DN
                 bSource.DataSource = table;
                 dataGridView1.DataSource = bSource;
             }
-            catch (Exception xyz)
+            catch (Exception pip)
             {
-                MessageBox.Show($"{xyz}");
+                MessageBox.Show($"{pip}");
             }
             finally
             {
