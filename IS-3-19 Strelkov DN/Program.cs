@@ -20,15 +20,15 @@ namespace IS_3_19_Strelkov_DN
             Application.Run(new Menu());
         }
     }
-    public class Baza
+    public class ConnCenter
     {
-        public static MySqlConnection baza()
+        public MySqlConnection connCenter()
         {
             string host = "caseum.ru";
             string port = "33333";
             string user = "test_user";
-            string password = "test_pass";
             string db = "db_test";
+            string password = "test_pass";
             string connStr = $"server={host};port={port};user={user};database={db};password={password};";
             MySqlConnection conn = new MySqlConnection(connStr);
             return conn;

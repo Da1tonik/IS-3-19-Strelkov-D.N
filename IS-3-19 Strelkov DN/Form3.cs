@@ -23,24 +23,24 @@ namespace IS_3_19_Strelkov_DN
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Baza baza = new Baza();
+            ConnCenter ConnCenter = new ConnCenter();
             try
             {
-                Baza.baza().Open();
+                ConnCenter.connCenter().Open();
                 string commandStr = "SELECT id AS 'ID', fio AS 'ФИО', theme_kurs AS 'Тема' FROM t_stud";
-                MyDA.SelectCommand = new MySqlCommand(commandStr, Baza.baza());
+                MyDA.SelectCommand = new MySqlCommand(commandStr, ConnCenter.connCenter());
                 MyDA.Fill(table);
                 bSource.DataSource = table;
                 dataGridView1.DataSource = bSource;
             }
-            catch (Exception ex)
+            catch (Exception xyz)
             {
-                MessageBox.Show($"{ex}");
+                MessageBox.Show($"{xyz}");
             }
             finally
             {
                 MessageBox.Show("Подключение завершено.");
-                Baza.baza().Close();
+                ConnCenter.connCenter().Close();
             }
         }
 
@@ -53,6 +53,11 @@ namespace IS_3_19_Strelkov_DN
             catch
             {
             }
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }
